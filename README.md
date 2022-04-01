@@ -52,3 +52,13 @@ This link [https://www.statistikdatabasen.scb.se/pxweb/en/ssd/](https://www.stat
 
 - Documentation about the APIs at Trafikverket: https://www.trafiklab.se/
 - [Python module for communicating with the swedish trafikverket api](https://github.com/endor-force/pytrafikverket)
+- HTML UI <https://www.trafikverket.se/trafikinformation/meddelanden/?Counties=14&Filtertype=trainMessage&>
+
+Requests:
+
+```
+# seems we can also have RoadMessage and FerryMessage
+curl 'https://api.trafikinfo.trafikverket.se/data.json' -X POST -H 'Content-Type: text/xml' --data-raw '<REQUEST><LOGIN authenticationkey="openapiconsolekey" /><QUERY objecttype="TrainMessage" schemaversion="1.3"><INCLUDE>StartDateTime</INCLUDE><INCLUDE>LastUpdateDateTime</INCLUDE><INCLUDE>ExternalDescription</INCLUDE><INCLUDE>ReasonCodeText</INCLUDE></QUERY></REQUEST>'
+```
+
+Image of the road: <https://api.trafikinfo.trafikverket.se/v1/Images/RoadConditionCamera_39635662.Jpeg?type=fullsize>
