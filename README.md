@@ -39,3 +39,7 @@ Python: https://github.com/kirajcg/pyscbwrapper/
  {'id': 'BE0101', 'type': 'l', 'text': 'Population statistics'}]
 
 ```
+
+## Website
+
+This link [https://www.statistikdatabasen.scb.se/pxweb/en/ssd/](https://www.statistikdatabasen.scb.se/pxweb/en/ssd/) is handy for a manual exploration of all available data.
