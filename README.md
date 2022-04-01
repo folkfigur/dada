@@ -50,4 +50,5 @@ This link [https://www.statistikdatabasen.scb.se/pxweb/en/ssd/](https://www.stat
 
 ### Trafikverket
 
-Documentation about the APIs at Trafikverket: https://www.trafiklab.se/
+- Documentation about the APIs at Trafikverket: https://www.trafiklab.se/
+- [Python module for communicating with the swedish trafikverket api](https://github.com/endor-force/pytrafikverket)
