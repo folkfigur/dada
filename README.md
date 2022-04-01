@@ -44,4 +44,10 @@ Java: https://github.com/dannil/scb-java-client
 
 ## Website
 
-This link [https://www.statistikdatabasen.scb.se/pxweb/en/ssd/](https://www.statistikdatabasen.scb.se/pxweb/en/ssd/) is handy for a manual exploration of all available data.
+This link [https://www.statistikdatabasen.scb.se/pxweb/en/ssd/](https://www.statistikdatabasen.scb.se/pxweb/en/ssd/) is handy to manually explore all data available at SCB.
+
+## Other data
+
+### Trafikverket
+
+Documentation about the APIs at Trafikverket: https://www.trafiklab.se/
