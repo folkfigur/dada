@@ -26,7 +26,9 @@ there is a rate-limit of [10 call-ups in a 10-second period from an IP address](
 
 ## Libraries
 
-Python: https://github.com/kirajcg/pyscbwrapper/
+Python: https://github.com/kirajcg/pyscbwrapper/ (in pip)
+
+Java: https://github.com/dannil/scb-java-client
 
 ## Databases
 
