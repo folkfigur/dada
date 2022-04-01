@@ -53,6 +53,7 @@ This link [https://www.statistikdatabasen.scb.se/pxweb/en/ssd/](https://www.stat
 - Documentation about the APIs at Trafikverket: https://www.trafiklab.se/
 - [Python module for communicating with the swedish trafikverket api](https://github.com/endor-force/pytrafikverket)
 - HTML UI <https://www.trafikverket.se/trafikinformation/meddelanden/?Counties=14&Filtertype=trainMessage&>
+- data model for this API : <https://api.trafikinfo.trafikverket.se/API/Model>
 
 Requests:
 
