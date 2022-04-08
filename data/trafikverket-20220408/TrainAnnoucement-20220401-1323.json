@@ -1,0 +1,1 @@
+{ "RESPONSE":{"RESULT":[{ "ERROR":{"SOURCE":"Request","MESSAGE":"TrainAnnouncement does not contain schemaversion 1.2. Valid versions for TrainAnnouncement are 1.0, 1.1, 1.3, 1.4, 1.5, 1.6"}}]}}

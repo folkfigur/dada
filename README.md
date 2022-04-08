@@ -46,7 +46,7 @@ Java: https://github.com/dannil/scb-java-client
 
 This link [https://www.statistikdatabasen.scb.se/pxweb/en/ssd/](https://www.statistikdatabasen.scb.se/pxweb/en/ssd/) is handy to manually explore all data available at SCB.
 
-## Other data
+## Other live data
 
 ### Trafikverket
 
@@ -63,3 +63,7 @@ curl 'https://api.trafikinfo.trafikverket.se/data.json' -X POST -H 'Content-Type
 ```
 
 Image of the road: <https://api.trafikinfo.trafikverket.se/v1/Images/RoadConditionCamera_39635662.Jpeg?type=fullsize>
+
+### School menus
+
+Eg: <https://skolmaten.se/hassle-skola/>
