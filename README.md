@@ -23,6 +23,13 @@ Image of the road: <https://api.trafikinfo.trafikverket.se/v1/Images/RoadConditi
 
 Eg: <https://skolmaten.se/hassle-skola/>
 
+### Water temperature in Sôdertalje
+
+```
+curl -L -o temperature.json https://sodertalje.eu-gb.mybluemix.net/getwatertemp
+
+```
+
 ## Other APIs
 
 ### SCB API
