@@ -30,6 +30,14 @@ curl -L -o temperature.json https://sodertalje.eu-gb.mybluemix.net/getwatertemp
 
 ```
 
+### Weather (SMHI)
+
+Documentation: `https://opendata.smhi.se/apidocs/metobs/index.html`
+
+List of stations: `https://opendata-download-metobs.smhi.se/api/version/latest/parameter/4.json`
+
+Live data feed from one station: `https://opendata-download-metobs.smhi.se/api/version/1.0/parameter/1/station/159880/period/latest-day/data.json`
+
 ## Other APIs
 
 ### SCB API
