@@ -52,9 +52,9 @@ We fetch the food of the day in the school menu of [Hassle skola](https://skolma
 
 ## folkfigur_surprise
 
-The surprise event is a train message displayed anywhere in Sweden and collected by [Trafikverket](https://www.trafikverket.se/). It is provided in the [TrainAnnouncement](https://api.trafikinfo.trafikverket.se/API/Model) at this [endpoint]( 'https://api.trafikinfo.trafikverket.se/data.json).
+The surprise event is a train message displayed anywhere in Sweden and collected by [Trafikverket](https://www.trafikverket.se/). For folkfigur, we pick one random message among all messages displayed in the train stations in Sweden. It is provided in the [TrainMessage](https://api.trafikinfo.trafikverket.se/API/Model) at this [endpoint]( 'https://api.trafikinfo.trafikverket.se/data.json).
 
 ## folkfigur_train_with
 
-This is one of Sweden'e [train operators](https://en.wikipedia.org/wiki/Rail_transport_in_Sweden#Operators) collected by [Trafikverket](https://www.trafikverket.se/). It is provided in the [TrainMessage](https://api.trafikinfo.trafikverket.se/API/Model) at this [endpoint]( 'https://api.trafikinfo.trafikverket.se/data.json).
+This is one of Sweden's [train operators](https://en.wikipedia.org/wiki/Rail_transport_in_Sweden#Operators) collected by [Trafikverket](https://www.trafikverket.se/). For folkfigur, we pick one random operator among all operators running a train  in Sweden.It is provided in the [TrainAnnouncement](https://api.trafikinfo.trafikverket.se/API/Model) at this [endpoint]( 'https://api.trafikinfo.trafikverket.se/data.json).
    
