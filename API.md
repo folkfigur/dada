@@ -40,7 +40,9 @@ We collect the temperature measured in [Arvidsjaurs](https://www.openstreetmap.o
 
 ## folkfigur_pm25_particles
 
-The level of [pm2.5 fine particles](https://en.wikipedia.org/wiki/Particulates) is measured throughout Sweden by [Naturvårdsverket](https://www.naturvardsverket.se/). For folkfigur, we pick one value at a random location. The data is provided through this [endpoint](https://www.naturvardsverket.se/data-och-statistik/luft/realtidsdata/partiklar-pm25-halter-i-luft-de-senaste-24-timmarna.json). 
+The level of [pm2.5 fine particles](https://en.wikipedia.org/wiki/Particulates) is measured throughout Sweden by [Naturvårdsverket](https://www.naturvardsverket.se/). The data is provided through this [endpoint](https://www.naturvardsverket.se/data-och-statistik/luft/realtidsdata/partiklar-pm25-halter-i-luft-de-senaste-24-timmarna.json). 
+
+For folkfigur, we pick pm2.5 measurement at a random location. 
 
 ## folkfigur_listens_to
 
@@ -50,11 +52,29 @@ The level of [pm2.5 fine particles](https://en.wikipedia.org/wiki/Particulates) 
 
 We fetch the food of the day in the school menu of [Hassle skola](https://skolmaten.se/hassle-skola/), in [Mariestad](https://www.openstreetmap.org/node/27430678). It is provided through this [endpoint](https://skolmaten.se/hassle-skola/rss/days/?limit=7).
 
+For folkfigur, we pick one random dish in the week's menu.
+
 ## folkfigur_surprise
 
-The surprise event is a train message displayed anywhere in Sweden and collected by [Trafikverket](https://www.trafikverket.se/). For folkfigur, we pick one random message among all messages displayed in the train stations in Sweden. It is provided in the [TrainMessage](https://api.trafikinfo.trafikverket.se/API/Model) at this [endpoint]( 'https://api.trafikinfo.trafikverket.se/data.json).
+The surprise event is a train message displayed anywhere in Sweden and collected by [Trafikverket](https://www.trafikverket.se/). It is provided in the [TrainMessage](https://api.trafikinfo.trafikverket.se/API/Model) at this [endpoint]( 'https://api.trafikinfo.trafikverket.se/data.json).
+
+For folkfigur, we pick one random message among all messages displayed in the train stations in Sweden.
 
 ## folkfigur_train_with
 
-This is one of Sweden's [train operators](https://en.wikipedia.org/wiki/Rail_transport_in_Sweden#Operators) collected by [Trafikverket](https://www.trafikverket.se/). For folkfigur, we pick one random operator among all operators running a train  in Sweden.It is provided in the [TrainAnnouncement](https://api.trafikinfo.trafikverket.se/API/Model) at this [endpoint]( 'https://api.trafikinfo.trafikverket.se/data.json).
-   
+This is one of Sweden's [train operators](https://en.wikipedia.org/wiki/Rail_transport_in_Sweden#Operators) collected by [Trafikverket](https://www.trafikverket.se/). It is provided in the [TrainAnnouncement](https://api.trafikinfo.trafikverket.se/API/Model) at this [endpoint]( 'https://api.trafikinfo.trafikverket.se/data.json).
+
+For folkfigur, we pick one random operator among all operators running a train  in Sweden. Possible values are:
+
+```
+"Länstrafiken Kronoberg"
+"Mälardalstrafik AB"
+"Mälartåg Kundservice"
+null
+"Öresundståg"
+"SJ"
+"Skånetrafiken"
+"SL"
+"Västtrafik"
+"VY"
+```
