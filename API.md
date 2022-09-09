@@ -26,7 +26,7 @@ One API endpoint serves a JSON data file
 }
 ```
 
-# DocumentationNaturvårdsverket 
+# Documentation 
 
 The data file is a mashup extracted from several public APIs provided by Swedish public services, as documented below.
 
@@ -78,3 +78,6 @@ null
 "Västtrafik"
 "VY"
 ```
+# last_electricity_data_in_megawatt
+
+This data comes from [Svenska kraftnät](https://www.svk.se/) collected through the [control room](https://www.svk.se/om-kraftsystemet/kontrollrummet/) ([endpoint](https://www.svk.se/services/controlroom/v2/production?date=2022-09-09&countryCode=SE)). The number represents the total electricity production over all types of power plants. 
