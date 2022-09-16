@@ -1,0 +1,23 @@
+{
+    "folkfigur_water_temperature": "18.3",
+    "folkfigur_air_temperature": "8.1",
+    "folkfigur_pm25_particles": "1.449",
+    "folkfigur_listens_to": {
+        "song": "Hitkidd & Glorilla - F.N.F. (Let'S Go)",
+        "short_int": 6
+    },
+    "folkfigur_eats": {
+        "menu": "Potatisbullar/ blodpudding",
+        "short_int": 63
+    },
+    "folkfigur_surprise": {
+        "event": "Banarbete",
+        "short_int": 126
+    },
+    "folkfigur_train_with": {
+        "operator": "SL",
+        "short_int": 107
+    },
+    "last_electricity_data_in_megawatt": "11620",
+    "ascii_art": "{=--__=-____==_====-==-=__===--__=-=__-=}"
+}
