@@ -1,7 +1,15 @@
 # Folkfigur contract
 
 ## Deployment
-The Folkfigur test contract is deployed on Goerli <https://goerli.etherscan.io/address/0xb0a3B8505752A790EEB4fc84Ca2b31510c3D25bA>
+
+The Folkfigur test contracts is deployed:
+* on Ropsten <https://ropsten.etherscan.io/address/0x8BEFf7Cf4391112FF2f4Ec23563f7416BD38E830>
+* on Rinkeby <https://rinkeby.etherscan.io/address/0x6ea8da9c46da2f7259ef9fc5dc4510ca25d7cce6>
+* on Goerli  <https://goerli.etherscan.io/address/0xb0a3B8505752A790EEB4fc84Ca2b31510c3D25bA>
+
+## ABI
+
+The Application Binary Interface (ABI) is in `Folkfigur.abi.json`.
 
 ## Query
 For getting the Folkfigur character, one calls method `getFolkfigurByIndex` on the contract, with the id of the NFT.
@@ -18,4 +26,4 @@ contract.functions.getFolkfigurByIndex(5).call()
 
 ## Metadata
 
-An example metadata file is in `metadata.json`.
+For Opensea, an example metadata file is in `metadata.json`.
