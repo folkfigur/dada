@@ -2,7 +2,7 @@
 
 ## Example
 
-```
+```json
 {
     "folkfigur_water_temperature": "25",
     "folkfigur_air_temperature" : "12",
@@ -66,7 +66,7 @@ This is one of Sweden's [train operators](https://en.wikipedia.org/wiki/Rail_tra
 
 For folkfigur, we pick one random operator among all operators running a train  in Sweden. Possible values are:
 
-```
+```perl
 "Länstrafiken Kronoberg"
 "Mälardalstrafik AB"
 "Mälartåg Kundservice"
@@ -89,7 +89,7 @@ The Folkfigur web client has a "mint" button.
 Clicking this button triggers the following procedure
 
 1. the client generates a JSON file that contains the folkfigir JSON data, as well as the metamask signature. The folkfigur JSON has been retrieved by the client from the endpoint described above. The address and signature are provided by the client's metamask. The generated JSON can look like:
-``` 
+```json
 {
   "folkfigur_json" : {....},
   "name": "Jane Doe",
@@ -100,7 +100,7 @@ Clicking this button triggers the following procedure
 2. send back the generated JSON to the folkfigur API. For example curl -X POST --data "{"folkfigur_json" : {....},..}" https://api42.folkfigur.se/v1/wait
 3. In the backend, the JSON file is added to the waiting list of NFTs to be minted. For now, the file is stored on the folkfigur server. Should eventually be on IPFS
 4. The API sends back the position of this piece in the minting queue
-```
+```json
 {"queue": 2}
 ```
 
