@@ -467,25 +467,6 @@
     "type": "function"
   },
   {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "_tokenId",
-        "type": "uint256"
-      }
-    ],
-    "name": "tokenURI",
-    "outputs": [
-      {
-        "internalType": "string",
-        "name": "",
-        "type": "string"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
     "inputs": [],
     "name": "totalSupply",
     "outputs": [
@@ -578,8 +559,14 @@
     "type": "function"
   },
   {
-    "inputs": [],
-    "name": "baseTokenURI",
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_tokenId",
+        "type": "uint256"
+      }
+    ],
+    "name": "tokenURI",
     "outputs": [
       {
         "internalType": "string",
@@ -614,6 +601,11 @@
       {
         "internalType": "string",
         "name": "piece",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "ipfs",
         "type": "string"
       }
     ],
