@@ -88,13 +88,14 @@ The Folkfigur web client has a "mint" button.
 
 Clicking this button triggers the following procedure
 
-1. the client generates a JSON file that contains the folkfigir JSON data, as well as the metamask signature. The folkfigur JSON has been retrieved by the client from the endpoint described above. The address and signature are provided by the client's metamask. The generated JSON can look like:
+1. the client generates a JSON file that contains the folkfigir JSON data, as well as the metamask signature, and a IPFS id pointing to the JSON metadata file for this folkfigur. The folkfigur JSON has been retrieved by the client from the endpoint described above. The address and signature are provided by the client's metamask. The generated JSON can look like:
 ```json
 {
   "folkfigur_json" : {....},
   "name": "Jane Doe",
   "address": "0xeabbbbe...",
-  "signature": {...}
+  "signature": {...},
+  "IPFS_id":"0x..."
 }
 ```
 2. send back the generated JSON to the folkfigur API. For example curl -X POST --data "{"folkfigur_json" : {....},..}" https://api42.folkfigur.se/v1/wait
