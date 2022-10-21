@@ -2,12 +2,14 @@
 
 ## Deployment
 
-The Folkfigur test contracts is deployed:
-* on Ropsten <https://ropsten.etherscan.io/token/0x79e700fe3B4E514b47c24Fc5FC9633aCb860C540>
-* on Rinkeby <https://rinkeby.etherscan.io/token/0x6ea8da9c46da2f7259ef9fc5dc4510ca25d7cce6>
-* on Goerli  <https://goerli.etherscan.io/token/0xb0a3B8505752A790EEB4fc84Ca2b31510c3D25bA>
+The Folkfigur test contract is deployedon Goerli at <https://goerli.etherscan.io/token/0xfD6b9b181531Cd28FFb88e3cCa09248E11279Fe8>.
 
-Opensea link: <https://testnets.opensea.io/collection/folkfigur>
+The previous version is at <https://goerli.etherscan.io/token/0xb0a3B8505752A790EEB4fc84Ca2b31510c3D25bA>
+
+Opensea link: <https://testnets.opensea.io/collection/folkfigur-v2>
+
+There are also previous versions on Ropsten <https://ropsten.etherscan.io/token/0x79e700fe3B4E514b47c24Fc5FC9633aCb860C540> and on Rinkeby <https://rinkeby.etherscan.io/token/0x6ea8da9c46da2f7259ef9fc5dc4510ca25d7cce6>.
+
 
 ## ABI
 
@@ -36,7 +38,7 @@ For Opensea, an example metadata file pushed to IPFS is in `metadata.json`.
 
 On Goerli, a minting costs approx 580000 gas, see https://goerli.etherscan.io/tx/0x057f8b678ea4487ce4225f7e86f8731088b0514ea48d76c1e39ea7abac6bee42.
 
-Under an conservative estimation of a price per gas of 40GWEI (see https://www.blocknative.com/gas-estimator), a single minting costs `0.024` ETH.
+Under an conservative estimation of a price per gas of 40GWEI (see https://www.blocknative.com/gas-estimator), a single minting costs `500000*40000000000/10**18 = 0.024` ETH.
 
 With a budget of 10 ETH, this makes 500 NFTs.
 

@@ -87,9 +87,16 @@ This data comes from [Svenska kraftnät](https://www.svk.se/) collected through 
 
 The Folkfigur web client has a "mint" button.
 
-Clicking this button triggers the following procedure
+Clicking this button triggers the following procedure:
 
-1. the client generates a JSON file that contains the folkfigir JSON data, as well as the metamask signature, and a IPFS id pointing to the JSON metadata file for this folkfigur. The folkfigur JSON has been retrieved by the client from the endpoint described above. The address and signature are provided by the client's metamask. The generated JSON can look like:
+1. the client generates a JSON file that contains:
+
+- the folkfigir JSON data. The folkfigur JSON has been retrieved by the client from the endpoint described above. 
+- the metamask signature
+- IPFS id pointing to the JSON metadata file for this folkfigur. The metadata file contains fields `name`, `description`, `image`. Example metadata: <https://github.com/folkfigur/dada/blob/main/data/example-metadata-ipfs.json>, <https://ipfs.io/ipfs/QmfJAKTWcpuJgxfwabaVdDv6GtPG9xpsGhzhg7XUGQvaQf>
+-  The address and signature of the minter, they are provided by the client's metamask. For generating the signature, see example script in `src/signFolkfigurJson.js`.
+
+The generated JSON looks like, see complete example in `data/example-json-for-waiting-list.json`:
 ```json
 {
   "folkfigur_json" : {....},
@@ -99,6 +106,7 @@ Clicking this button triggers the following procedure
   "IPFS_id":"0x..."
 }
 ```
+
 2. send this JSON to the folkfigur API for being in the waiting list. 
 
     curl -X POST --data @data/example-json-for-waiting-list.json https://api42.folkfigur.se/v1/wait
@@ -109,5 +117,34 @@ Clicking this button triggers the following procedure
 {"queue": 2}
 ```
 
+# Complete workflow for a citizen to get a FolkFigur NFT
+
+<img src="https://github.com/folkfigur/dada/blob/main/folkfigur-workflow.png" alt="folkfigur workflow" title="The workflow from a citizen connecting to folkfigur.se to a folkfigur art piece minter" width="666"/>
+
+
+The figure abover summarizes the architecture of folkfigur, as well as the general workflow when a citizen wants to mint a folkfigur NFT. The key components of the architecture are 
+- the folkfigur server (FF server), which collects data, serves json files to generate art pieces and stores requests for minting
+- the folkfigur client (FF client), which runs in the browser. It  generates and renders an artpiece, handles the connection with the user's wallet, orchestrates the interactions with pinata and the FF server to prepare the minting.
+- the minter, a human in charge of manually minting folkfigur art pieces.
+
+- 1 The user connects her wallet
+- 2 The user connects to [https://folkfigur.se/home](https://folkfigur.se/home)
+- 3 A new piece is generated
+  - 3.1. the FF server sends a folkfigur json file to the browser
+  - 3.2. the FF client side generates a unique artpiece with the json file and displays it in the browser
+- 4 the user clicks the "mint" button (specified above), which triggers the following actions:
+  - 4.1 the FF client receive the 'mint' event
+  - 4.2 the FF client asks the wallet to sign the folkfigur json
+  - 4.3 the wallet returns a signature.
+  - 4.4 the FF client takes a snapshot of the folfigur art piece and sends an image file to pinata, which stores the file on IPFS
+  - 4.5 pinata return the IPFS id of the image to the FF client
+  - 4.6 the FF client generates a metadata file that includes the IPFS is of the image ([example](https://github.com/folkfigur/dada/blob/main/data/example-metadata-ipfs.json)) and sends the file to pinata, which stores the file on IPFS
+  - 4.7 pinata returns the IPFS id of the metadata file
+  - 4.8 the FF client generates a json file for waiting list ([example](data/example-json-for-waiting-list.json)), with the signature, the IPFS id of the metadata, the folkfigur json file and other information
+  - 4.9 the FF server adds this file in the waiting list
+- 5 A minter agent manually mints a NFT
+  - 5.1 the minter fetches a file in the waiting list
+  - 5.2 the FF server sends back a file
+  - 5.3 the minter agent runs some checks on the folkfigur json and then mints it on the blockchain
 
 
