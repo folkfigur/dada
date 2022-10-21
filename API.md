@@ -87,9 +87,16 @@ This data comes from [Svenska kraftnät](https://www.svk.se/) collected through 
 
 The Folkfigur web client has a "mint" button.
 
-Clicking this button triggers the following procedure
+Clicking this button triggers the following procedure:
 
-1. the client generates a JSON file that contains the folkfigir JSON data, as well as the metamask signature, and a IPFS id pointing to the JSON metadata file for this folkfigur. The folkfigur JSON has been retrieved by the client from the endpoint described above. The address and signature are provided by the client's metamask. The generated JSON can look like:
+1. the client generates a JSON file that contains:
+
+- the folkfigir JSON data. The folkfigur JSON has been retrieved by the client from the endpoint described above. 
+- the metamask signature
+- IPFS id pointing to the JSON metadata file for this folkfigur. The metadata file contains fields `name`, `description`, `image`. Example metadata: <https://github.com/folkfigur/dada/blob/main/data/example-metadata-ipfs.json>, <https://ipfs.io/ipfs/QmfJAKTWcpuJgxfwabaVdDv6GtPG9xpsGhzhg7XUGQvaQf>
+-  The address and signature of the minter, they are provided by the client's metamask. For generating the signature, see example script in `src/signFolkfigurJson.js`.
+
+The generated JSON looks like, see complete example in `data/example-json-for-waiting-list.json`:
 ```json
 {
   "folkfigur_json" : {....},
@@ -99,8 +106,6 @@ Clicking this button triggers the following procedure
   "IPFS_id":"0x..."
 }
 ```
-
-For generating the signature, see example script in `src/signFolkfigurJson.js`.
 
 2. send this JSON to the folkfigur API for being in the waiting list. 
 
