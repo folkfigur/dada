@@ -118,4 +118,6 @@ The generated JSON looks like, see complete example in `data/example-json-for-wa
 ```
 
 
+<img src="https://github.com/folkfigur/dada/blob/main/folkfigur-workflow.png" alt="folkfigur workflow" title="The workflow from a citizen connecting to folkfigur.se to a folkfigur art piece minter" width="666"/>
+
 
