@@ -99,7 +99,10 @@ Clicking this button triggers the following procedure
   "IPFS_id":"0x..."
 }
 ```
-2. send back the generated JSON to the folkfigur API. For example curl -X POST --data "{"folkfigur_json" : {....},..}" https://api42.folkfigur.se/v1/wait
+2. send this JSON to the folkfigur API for being in the waiting list. 
+
+    curl -X POST --data @data/example-json-for-waiting-list.json https://api42.folkfigur.se/v1/wait
+
 3. In the backend, the JSON file is added to the waiting list of NFTs to be minted. For now, the file is stored on the folkfigur server. Should eventually be on IPFS
 4. The API sends back the position of this piece in the minting queue
 ```json
