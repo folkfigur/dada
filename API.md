@@ -117,7 +117,14 @@ The generated JSON looks like, see complete example in `data/example-json-for-wa
 {"queue": 2}
 ```
 
+# Complete workflow for a citizen to get a FolkFigur NFT
 
 <img src="https://github.com/folkfigur/dada/blob/main/folkfigur-workflow.png" alt="folkfigur workflow" title="The workflow from a citizen connecting to folkfigur.se to a folkfigur art piece minter" width="666"/>
+
+1. The user connects her wallet
+2. The user connects to [https://folkfigur.se/home](https://folkfigur.se/home)
+3. A new piece is generated
+  3.1. the server sends a folkfigur json file to the browser
+  3.2. the client side generates a unique artpiece with the json file and displays it in the browser
 
 
