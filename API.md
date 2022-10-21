@@ -99,6 +99,9 @@ Clicking this button triggers the following procedure
   "IPFS_id":"0x..."
 }
 ```
+
+For generating the signature, see example script in `src/signFolkfigurJson.js`.
+
 2. send this JSON to the folkfigur API for being in the waiting list. 
 
     curl -X POST --data @data/example-json-for-waiting-list.json https://api42.folkfigur.se/v1/wait
