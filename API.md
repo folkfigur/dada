@@ -94,7 +94,7 @@ Clicking this button triggers the following procedure:
 
 - the JSON metadata file. The folkfigur JSON has been retrieved by the client from the endpoint described above. 
 - the metamask signature of the folkfigur JSON.  For generating the signature, see example script in `src/signFolkfigurJson.js`.
-- IPFS id pointing to the JSON metadata file for this folkfigur. The metadata file contains fields `name`, `description`, `image` and the folkfigur JSON file. Example metadata: <https://github.com/folkfigur/dada/blob/main/data/example-metadata-ipfs.json>, <https://ipfs.io/ipfs/QmfJAKTWcpuJgxfwabaVdDv6GtPG9xpsGhzhg7XUGQvaQf>
+- IPFS id pointing to the JSON metadata file for this folkfigur. The metadata file is compliant with [EIP721](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-721.md), it contains fields `name`, `description`, `image` and the folkfigur JSON file. Example metadata: <https://github.com/folkfigur/dada/blob/main/data/example-metadata-ipfs.json>, <https://ipfs.io/ipfs/QmfJAKTWcpuJgxfwabaVdDv6GtPG9xpsGhzhg7XUGQvaQf>
 -  The address the minter's wallet,  provided by the client's metamask.
 -  The name and email address of the person who wishes to mint a folkfigur.
 
