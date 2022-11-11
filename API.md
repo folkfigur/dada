@@ -85,22 +85,25 @@ This data comes from [Svenska kraftnät](https://www.svk.se/) collected through 
 
 # One API endpoint to handle the minting waiting list
 
-The Folkfigur web client has a "mint" button.
+The Folkfigur web client has a "Enter the minting waitinlist" button.
 
 Clicking this button triggers the following procedure:
 
-1. the client generates a JSON file that contains:
+1. The client asks the person for a name and email address. The email address will be used to send a notification when the NFT has been minted
+2. Then, the client generates a JSON file for the minting waiting list, which contains:
 
-- the folkfigir JSON data. The folkfigur JSON has been retrieved by the client from the endpoint described above. 
-- the metamask signature
-- IPFS id pointing to the JSON metadata file for this folkfigur. The metadata file contains fields `name`, `description`, `image`. Example metadata: <https://github.com/folkfigur/dada/blob/main/data/example-metadata-ipfs.json>, <https://ipfs.io/ipfs/QmfJAKTWcpuJgxfwabaVdDv6GtPG9xpsGhzhg7XUGQvaQf>
--  The address and signature of the minter, they are provided by the client's metamask. For generating the signature, see example script in `src/signFolkfigurJson.js`.
+- the JSON metadata file. The folkfigur JSON has been retrieved by the client from the endpoint described above. 
+- the metamask signature of the folkfigur JSON.  For generating the signature, see example script in `src/signFolkfigurJson.js`.
+- IPFS id pointing to the JSON metadata file for this folkfigur. The metadata file is compliant with [EIP721](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-721.md), it contains fields `name`, `description`, `image` and the folkfigur JSON file. Example metadata: <https://github.com/folkfigur/dada/blob/main/data/example-metadata-ipfs.json>, <https://ipfs.io/ipfs/QmfJAKTWcpuJgxfwabaVdDv6GtPG9xpsGhzhg7XUGQvaQf>
+-  The address the minter's wallet,  provided by the client's metamask.
+-  The name and email address of the person who wishes to mint a folkfigur.
 
 The generated JSON looks like, see complete example in `data/example-json-for-waiting-list.json`:
 ```json
 {
   "folkfigur_json" : {....},
   "name": "Jane Doe",
+  "email" : "jane.doe@rick.roll"
   "address": "0xeabbbbe...",
   "signature": {...},
   "IPFS_id":"0x..."
@@ -115,6 +118,10 @@ The generated JSON looks like, see complete example in `data/example-json-for-wa
 4. The API sends back the position of this piece in the minting queue
 ```json
 {"queue": 2}
+```
+If the minter has already entered the waiting list with the same wallet, the API sends back an error message
+```json
+{"error": "You are already in the waiting list with this wallet. You can receive only one FolkFigur NFT per wallet."}
 ```
 
 # Complete workflow for a citizen to get a FolkFigur NFT

@@ -1,5 +1,27 @@
 {
   "name": "Folkfigur #42",
   "description": "Folkfigur NFT, commissioned by Statens konstråd, 2022.",
-  "image": "ipfs://QmTdzxaDecB2wwF2gc3nL74VtNKvpaNQz8BF1PXYFtrufW"
+  "image": "ipfs://QmTdzxaDecB2wwF2gc3nL74VtNKvpaNQz8BF1PXYFtrufW",
+  "folkfigur_json" : {
+   "water": "25",
+   "air": "12",
+   "pm25": "0.6",
+   "listens": {
+    "song": "Trilogy - Echoes Of Silence      Utgiven:  2012",
+     "int": 3
+    },
+   "eats": {
+    "food": "Potatis och purjolökssoppa",
+    "int": 4
+   },
+   "surprise": {
+    "event": "Djur i spåret",
+    "int": 5
+   },
+   "train": {
+    "operator": "Skånetrafiken",
+    "int":6
+   },
+   "elec": "12966"
+  }
 }
