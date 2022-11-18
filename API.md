@@ -1,4 +1,6 @@
-# One API endpoint serves a JSON data file
+# Data endpoint 
+
+`/v1/dada` serves a JSON data file with live data about Sweden.
 
 ## Example
 
@@ -83,7 +85,7 @@ null
 
 This data comes from [Svenska kraftnät](https://www.svk.se/) collected through the [control room](https://www.svk.se/om-kraftsystemet/kontrollrummet/) ([endpoint](https://www.svk.se/services/controlroom/v2/production?date=2022-09-09&countryCode=SE)). The number represents the total electricity production over all types of power plants. 
 
-# One API endpoint to handle the minting waiting list
+# Minting waiting list end point
 
 The Folkfigur web client has a "Enter the minting waitinlist" button.
 
@@ -154,4 +156,12 @@ The figure abover summarizes the architecture of folkfigur, as well as the gener
   - 5.2 the FF server sends back a file
   - 5.3 the minter agent runs some checks on the folkfigur json and then mints it on the blockchain
 
+The `/v1/status` endpoint enables to know whether a user is already in the waiting list:
+
+```
+$ curl -X POST --data '{"address":"0x"}' https://api42.folkfigur.se/v1/status
+{"in_waiting_list": false}
+$ curl -X POST --data '{"address":"0x4b9265e471d2dbf14434e26643e1b95ecfea112e"}' https://api42.folkfigur.se/v1/status
+{"in_waiting_list": true}
+```
 
