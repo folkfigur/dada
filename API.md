@@ -108,7 +108,8 @@ The generated JSON looks like, see complete example in `data/example-json-for-wa
   "email" : "jane.doe@rick.roll"
   "address": "0xeabbbbe...",
   "signature": {...},
-  "IPFS_id":"0x..."
+  "IPFS_id":"0x...",
+  "IpFS_image_id":"QmPh..."
 }
 ```
 
