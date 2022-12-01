@@ -124,8 +124,12 @@ The generated JSON looks like, see complete example in `data/example-json-for-wa
 ```
 If the minter has already entered the waiting list with the same wallet, the API sends back an error message
 ```json
-{"error": "You are already in the waiting list with this wallet. You can receive only one FolkFigur NFT per wallet."}
+{"error": "You are already in the waiting list with this wallet. You can receive only one FolkFigur NFT per wallet.","error_code":1}
 ```
+The API implements two other error codes
+{"error":"cannot find folkfigur","error_code":2} / if the FolkFigur request through the 'see' feature is not on the server
+{"error":"the waiting list is full","error_code":3}' / if the weekly bound of the minting waiting list has been reached
+
 
 # Complete workflow for a citizen to get a FolkFigur NFT
 
