@@ -1,4 +1,4 @@
-# Data endpoint 
+# Data endpoint /v1/dada
 
 `/v1/dada` serves a JSON data file with live data about Sweden.
 
@@ -28,8 +28,6 @@
  "elec": "12966"
 }
 ```
-
-## Documentation 
 
 The data file is a mashup extracted from several public APIs provided by Swedish public services, as documented below.
 
@@ -85,7 +83,17 @@ null
 
 This data comes from [Svenska kraftnät](https://www.svk.se/) collected through the [control room](https://www.svk.se/om-kraftsystemet/kontrollrummet/) ([endpoint](https://www.svk.se/services/controlroom/v2/production?date=2022-09-09&countryCode=SE)). The number represents the total electricity production over all types of power plants. 
 
-# Minting waiting list end point
+# Visualization endpoint /v1/see
+
+`/v1/see/{id}` serves either the FolkFigur JSON or the image. It takes either the contract identifier of the piece or the ipfs id:
+
+Examples:
+* <https://api42.folkfigur.se/v1/see/QmUF6ZKaDThhXhKVmsvsfT37DtMoi2yfsva22BrxSirfV5> returns the json corresponding to the URL <https://folkfigur.se/see/QmUF6ZKaDThhXhKVmsvsfT37DtMoi2yfsva22BrxSirfV5>, it contains an additional field pointing to the image ("local_image"), avoiding to depend on IPFS in the front-end (no dependency to Pinata or other external services).
+* <https://api42.folkfigur.se/v1/see/736.json>
+* <https://api42.folkfigur.se/v1/see/736.png>
+
+
+# Minting waiting list end point /v1/wait (closed)
 
 The Folkfigur web client has a "Enter the minting waitinlist" button.
 
