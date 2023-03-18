@@ -3,9 +3,9 @@
 NFT Artwork commissioned by [Statens konstråd](https://statenskonstrad.se/), 2022.
 
 * [Documentation of the REST API](https://github.com/folkfigur/dada/blob/main/API.md)
-* [Documentation of the contract](https://github.com/folkfigur/dada/blob/main/contracts/README.md)
-* [Documentation of card generation](https://github.com/folkfigur/dada/blob/main/unique-urls-for-card.md)
 * [Notes about live data feeds](https://github.com/folkfigur/dada/blob/main/data-feeds.md)
+* [Documentation of the contract](https://github.com/folkfigur/dada/blob/main/contracts/README.md)
+* [Collection](https://github.com/folkfigur/dada/blob/main/collection/)
 
 ```json
 {
