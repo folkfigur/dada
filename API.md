@@ -1,3 +1,10 @@
+# Listing endpoint /v1/all
+
+`/v1/all` returns the list of all FolkFigur.
+
+     curl https://api42.folkfigur.se/v1/all
+
+
 # Data endpoint /v1/dada
 
 `/v1/dada` serves a JSON data file with live data about Sweden.
